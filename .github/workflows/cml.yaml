@@ -23,6 +23,7 @@ jobs:
           
           echo "## Model Metrics" > report.md
           cat metrics.txt >> report.md
+          cml-send-comment report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
