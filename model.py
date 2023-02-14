@@ -68,6 +68,7 @@ input_shape = X[0].shape
 # Take a single example of y
 output_shape = y[0].shape
 
+print(input_shape)
 
 # Set random seed
 tf.random.set_seed(42)
