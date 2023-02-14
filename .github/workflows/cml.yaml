@@ -21,7 +21,8 @@ jobs:
           pip install -r requirements.txt
           python model.py
           
+          echo "## Model Metrics" > report.md
           cat metrics.txt >> report.md
-          cml comment create report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
