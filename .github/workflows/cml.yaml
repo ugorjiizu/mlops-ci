@@ -24,7 +24,6 @@ jobs:
           python model.py
           
           cat metrics.txt >> report.md
-          echo "## Model Metrics" > report.md
           cml comment create report.md
         
           
