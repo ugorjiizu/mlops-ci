@@ -10,7 +10,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
       - run: |
           pip install -r requirements.txt
-          python model.py  # generate plot.png
+          python model.py 
           # Create CML report
           cat metrics.txt >> report.md
           cml comment create report.md
