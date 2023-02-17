@@ -21,7 +21,7 @@ jobs:
           
           echo "## Model Metrics ##" > report.md
           cat metrics.txt >> report.md
-          echo "\n## Model Performance ##" > report.md
+          echo "\n## Model Performance ##" >> report.md
           echo "![](./model_results.png)" >> report.md
           
           cml comment create report.md
