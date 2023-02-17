@@ -16,8 +16,15 @@ jobs:
       - run: |
           pip install -r requirements.txt
           python model.py  
+          
           # Create CML report
+          
+          echo "## Model Metrics ##" > report.md
           cat metrics.txt >> report.md
+          echo "\n## Model Performance ##" > report.md
+          echo "![](./model_results.png)" >> report.md
+          
           cml comment create report.md
+          
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
